@@ -1,11 +1,14 @@
 const synonymsHelper = require('./helper.js');
 const express = require('express');
+const cors = require('cors')
 const bodyParser = require('body-parser');
 
 const app = express();
 app.use(bodyParser.json());
 
 const port = 9000;
+
+app.use(cors())
 
 let synonyms = []; // in memory data (array of arrays / multi dimensional array)
 
